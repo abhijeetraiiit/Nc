@@ -64,7 +64,29 @@ Building the future of e-commerce in India with:
 
 ## 🚀 Quick Start
 
-### Option 1: Automated Setup (Recommended for Beginners)
+### 🌐 Want to Try Online? (No Installation!)
+
+**Yes! You can run this platform directly through a website.**
+
+**Three ways to access online:**
+
+1. **🎮 Try in Browser** - Use GitHub Codespaces (60 hrs/month free)
+   
+   [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=abhijeetraiiit/Nc)
+
+2. **🚀 Deploy Your Own** - One-click deploy (Free tier available)
+   
+   [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/abhijeetraiiit/Nc&project-name=nc-ecommerce)
+
+3. **💻 Or Set Up Locally** - Full control (see below)
+
+📖 **[Complete Online Deployment Guide](./ONLINE-DEPLOYMENT.md)** - Deploy to Vercel, Railway, or run in browser!
+
+---
+
+### 💻 Local Setup Options
+
+#### Option 1: Automated Setup (Recommended for Beginners)
 
 **Linux/Mac:**
 ```bash
@@ -80,7 +102,7 @@ cd Nc
 setup.bat
 ```
 
-### Option 2: Manual Setup
+#### Option 2: Manual Setup
 
 ```bash
 # 1. Clone repository
@@ -113,8 +135,10 @@ npm run dev
 - 🔌 **API Gateway**: http://localhost:4000
 - 📚 **API Docs**: http://localhost:4000/api/docs
 
-### 📖 Detailed Guide
-**New to the project?** Read the [**Complete Step-by-Step Guide**](./QUICKSTART.md) for beginners!
+### 📖 Guides
+- **[Online Deployment](./ONLINE-DEPLOYMENT.md)** - Run through website (No installation!)
+- **[Quick Start Guide](./QUICKSTART.md)** - Complete setup for beginners
+- **[Troubleshooting](./TROUBLESHOOTING.md)** - Common issues solved
 
 ## 📋 Development Status
 

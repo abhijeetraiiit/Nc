@@ -1,0 +1,57 @@
+tasks:
+  - name: Setup
+    init: |
+      npm install
+      docker-compose up -d postgres mongodb redis
+      cd packages/database
+      npx prisma generate
+      npx prisma migrate dev --name init
+      cd ../..
+    command: |
+      echo "🎉 Setup complete! Starting development servers..."
+      npm run dev
+
+ports:
+  - port: 3000
+    onOpen: open-preview
+    name: Web App
+    description: Customer-facing e-commerce site
+  - port: 3001
+    onOpen: notify
+    name: Vendor Dashboard
+    description: Vendor management portal
+  - port: 3002
+    onOpen: notify
+    name: Admin Panel
+    description: Platform administration
+  - port: 4000
+    onOpen: notify
+    name: API Gateway
+    description: Main API Gateway
+  - port: 5432
+    onOpen: ignore
+    name: PostgreSQL
+  - port: 27017
+    onOpen: ignore
+    name: MongoDB
+  - port: 6379
+    onOpen: ignore
+    name: Redis
+
+vscode:
+  extensions:
+    - dbaeumer.vscode-eslint
+    - esbenp.prettier-vscode
+    - Prisma.prisma
+    - bradlc.vscode-tailwindcss
+    - ms-azuretools.vscode-docker
+
+github:
+  prebuilds:
+    master: true
+    branches: true
+    pullRequests: true
+    pullRequestsFromForks: false
+    addCheck: true
+    addComment: true
+    addBadge: true
