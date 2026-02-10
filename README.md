@@ -135,7 +135,19 @@ npm run dev
 - 🔌 **API Gateway**: http://localhost:4000
 - 📚 **API Docs**: http://localhost:4000/api/docs
 
+### ⚠️ Common Issue: "npm run dev not working"
+
+If you get an error when running `npm run dev`, **you need to install dependencies first**:
+
+```bash
+npm install  # ← Run this first!
+npm run dev  # ← Then run this
+```
+
+The project now includes helpful error messages to guide you. See [npm run dev Troubleshooting](./docs/NPM-DEV-TROUBLESHOOTING.md) for more help.
+
 ### 📖 Guides
+- **[npm run dev Issues](./docs/NPM-DEV-TROUBLESHOOTING.md)** - Fix "npm run dev" errors
 - **[Online Deployment](./ONLINE-DEPLOYMENT.md)** - Run through website (No installation!)
 - **[Quick Start Guide](./QUICKSTART.md)** - Complete setup for beginners
 - **[Troubleshooting](./TROUBLESHOOTING.md)** - Common issues solved

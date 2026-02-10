@@ -8,7 +8,8 @@
     "services/*"
   ],
   "scripts": {
-    "dev": "turbo run dev",
+    "dev": "node scripts/dev-with-check.js",
+    "dev:direct": "turbo run dev",
     "build": "turbo run build",
     "lint": "turbo run lint",
     "test": "turbo run test",
@@ -16,7 +17,8 @@
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
     "db:migrate": "turbo run db:migrate",
     "db:generate": "turbo run db:generate",
-    "type-check": "turbo run type-check"
+    "type-check": "turbo run type-check",
+    "check-install": "node scripts/check-install.js"
   },
   "devDependencies": {
     "@types/node": "^20.10.0",
