@@ -64,6 +64,24 @@ Building the future of e-commerce in India with:
 
 ## 🚀 Quick Start
 
+### Option 1: Automated Setup (Recommended for Beginners)
+
+**Linux/Mac:**
+```bash
+git clone https://github.com/abhijeetraiiit/Nc.git
+cd Nc
+./setup.sh
+```
+
+**Windows:**
+```cmd
+git clone https://github.com/abhijeetraiiit/Nc.git
+cd Nc
+setup.bat
+```
+
+### Option 2: Manual Setup
+
 ```bash
 # 1. Clone repository
 git clone https://github.com/abhijeetraiiit/Nc.git
@@ -74,7 +92,6 @@ npm install
 
 # 3. Setup environment
 cp .env.example .env
-# Edit .env with your configuration
 
 # 4. Start databases
 docker-compose up -d postgres mongodb redis
@@ -89,12 +106,15 @@ cd ../..
 npm run dev
 ```
 
-**Access Applications:**
-- 🌐 Web App: http://localhost:3000
-- 👔 Vendor Dashboard: http://localhost:3001
-- 🔧 Admin Panel: http://localhost:3002
-- 🔌 API Gateway: http://localhost:4000
-- 📚 API Docs: http://localhost:4000/api/docs
+### Access Applications
+- 🌐 **Web App**: http://localhost:3000
+- 👔 **Vendor Dashboard**: http://localhost:3001
+- 🔧 **Admin Panel**: http://localhost:3002
+- 🔌 **API Gateway**: http://localhost:4000
+- 📚 **API Docs**: http://localhost:4000/api/docs
+
+### 📖 Detailed Guide
+**New to the project?** Read the [**Complete Step-by-Step Guide**](./QUICKSTART.md) for beginners!
 
 ## 📋 Development Status
 
