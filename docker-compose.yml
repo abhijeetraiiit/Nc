@@ -1,0 +1,154 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:16-alpine
+    container_name: nc-postgres
+    environment:
+      POSTGRES_USER: nc_user
+      POSTGRES_PASSWORD: nc_password
+      POSTGRES_DB: nc_ecommerce
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U nc_user"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # MongoDB Database
+  mongodb:
+    image: mongo:7
+    container_name: nc-mongodb
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: nc_user
+      MONGO_INITDB_ROOT_PASSWORD: nc_password
+      MONGO_INITDB_DATABASE: nc_ecommerce
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/nc_ecommerce --quiet
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Redis Cache
+  redis:
+    image: redis:7-alpine
+    container_name: nc-redis
+    command: redis-server --requirepass nc_password
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # API Gateway
+  api-gateway:
+    build:
+      context: ./services/api-gateway
+      dockerfile: ../../Dockerfile.service
+    container_name: nc-api-gateway
+    ports:
+      - "4000:4000"
+    environment:
+      - PORT=4000
+      - NODE_ENV=development
+      - JWT_SECRET=nc-development-secret-change-in-production
+      - DATABASE_URL=postgresql://nc_user:nc_password@postgres:5432/nc_ecommerce
+      - MONGODB_URI=mongodb://nc_user:nc_password@mongodb:27017/nc_ecommerce
+      - REDIS_URL=redis://:nc_password@redis:6379
+    depends_on:
+      postgres:
+        condition: service_healthy
+      mongodb:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - ./services/api-gateway:/app
+      - /app/node_modules
+    command: npm run dev
+
+  # Vendor Service
+  vendor-service:
+    build:
+      context: ./services/vendor-service
+      dockerfile: ../../Dockerfile.service
+    container_name: nc-vendor-service
+    ports:
+      - "4001:4001"
+    environment:
+      - PORT=4001
+      - NODE_ENV=development
+      - DATABASE_URL=postgresql://nc_user:nc_password@postgres:5432/nc_ecommerce
+      - REDIS_URL=redis://:nc_password@redis:6379
+    depends_on:
+      - postgres
+      - redis
+    volumes:
+      - ./services/vendor-service:/app
+      - /app/node_modules
+    command: npm run dev
+
+  # Product Service
+  product-service:
+    build:
+      context: ./services/product-service
+      dockerfile: ../../Dockerfile.service
+    container_name: nc-product-service
+    ports:
+      - "4002:4002"
+    environment:
+      - PORT=4002
+      - NODE_ENV=development
+      - MONGODB_URI=mongodb://nc_user:nc_password@mongodb:27017/nc_ecommerce
+      - REDIS_URL=redis://:nc_password@redis:6379
+    depends_on:
+      - mongodb
+      - redis
+    volumes:
+      - ./services/product-service:/app
+      - /app/node_modules
+    command: npm run dev
+
+  # Order Service
+  order-service:
+    build:
+      context: ./services/order-service
+      dockerfile: ../../Dockerfile.service
+    container_name: nc-order-service
+    ports:
+      - "4003:4003"
+    environment:
+      - PORT=4003
+      - NODE_ENV=development
+      - DATABASE_URL=postgresql://nc_user:nc_password@postgres:5432/nc_ecommerce
+      - MONGODB_URI=mongodb://nc_user:nc_password@mongodb:27017/nc_ecommerce
+      - REDIS_URL=redis://:nc_password@redis:6379
+    depends_on:
+      - postgres
+      - mongodb
+      - redis
+    volumes:
+      - ./services/order-service:/app
+      - /app/node_modules
+    command: npm run dev
+
+volumes:
+  postgres_data:
+  mongodb_data:
+  redis_data:
+
+networks:
+  default:
+    name: nc-network
