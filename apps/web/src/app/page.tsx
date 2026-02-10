@@ -1,3 +1,5 @@
+'use client';
+
 import { BentoGrid, BentoItem, Button, ProductCard } from '@nc/ui';
 import Link from 'next/link';
 

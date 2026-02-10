@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * Product Card Component
  * Neubrutalism-style product display card

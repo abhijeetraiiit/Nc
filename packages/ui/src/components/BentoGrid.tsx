@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * Bento Grid Component
  * Modern grid layout for content organization

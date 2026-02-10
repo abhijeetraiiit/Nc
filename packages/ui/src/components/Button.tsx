@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * Brutal Button Component
  * Bold, high-contrast button with thick borders and offset shadow

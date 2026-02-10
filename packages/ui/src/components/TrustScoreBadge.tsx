@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * Trust Score Badge Component
  * Displays vendor trust score with visual indicator
