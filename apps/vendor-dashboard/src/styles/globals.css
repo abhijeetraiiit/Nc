@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  font-family: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Neubrutalism utility classes */
+.brutal-shadow {
+  box-shadow: 8px 8px 0px #000000;
+}
+
+.brutal-shadow-sm {
+  box-shadow: 4px 4px 0px #000000;
+}
+
+.brutal-shadow-lg {
+  box-shadow: 12px 12px 0px #000000;
+}
+
+.brutal-border {
+  border: 4px solid #000000;
+}
+
+.brutal-border-thick {
+  border: 6px solid #000000;
+}
+
+.brutal-hover:hover {
+  transform: translate(-4px, -4px);
+  transition: transform 150ms ease;
+}
