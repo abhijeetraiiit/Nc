@@ -1,3 +1,5 @@
+'use client';
+
 import { Button, TrustScoreBadge } from '@nc/ui';
 import Link from 'next/link';
 
