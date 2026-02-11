@@ -3,6 +3,20 @@
 > **Enterprise-grade, India-focused multivendor marketplace built for 2026**
 
 > [!IMPORTANT]
+> ## ⚠️⚠️⚠️ FIRST TIME SETUP? ⚠️⚠️⚠️
+> 
+> **Run this command BEFORE doing anything else:**
+> 
+> ```bash
+> cp .env.example .env
+> ```
+> 
+> **This fixes the "DATABASE_URL not found" error!**  
+> See [URGENT-READ-FIRST.md](./URGENT-READ-FIRST.md) for details.
+
+---
+
+> [!IMPORTANT]
 > ## 🆕 COMPLETE BEGINNER? → [COMPLETE-BEGINNER-GUIDE.md](./COMPLETE-BEGINNER-GUIDE.md)
 > 
 > **Never coded before? No programming experience? No problem!**  
