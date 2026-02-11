@@ -2,6 +2,20 @@
 
 > **Enterprise-grade, India-focused multivendor marketplace built for 2026**
 
+> [!TIP]
+> ## 🚀 HOW TO OPEN THE PLATFORM
+> 
+> ```bash
+> npm run dev
+> ```
+> 
+> **Then visit:** http://localhost:3000
+> 
+> **That's it!** You'll see the beautiful e-commerce platform! ✨  
+> 📖 **Complete guide:** [HOW-TO-OPEN.md](./HOW-TO-OPEN.md)
+
+---
+
 > [!IMPORTANT]
 > ## ⚠️⚠️⚠️ GETTING "DATABASE_URL NOT FOUND" ERROR? ⚠️⚠️⚠️
 > 
