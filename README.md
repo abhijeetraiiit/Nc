@@ -3,7 +3,19 @@
 > **Enterprise-grade, India-focused multivendor marketplace built for 2026**
 
 > [!IMPORTANT]
-> ## 🚀 WANT TO RUN IT? → [START-HERE.md](./START-HERE.md)
+> ## 🆕 COMPLETE BEGINNER? → [COMPLETE-BEGINNER-GUIDE.md](./COMPLETE-BEGINNER-GUIDE.md)
+> 
+> **Never coded before? No programming experience? No problem!**  
+> This guide explains EVERYTHING step-by-step, assuming zero prior knowledge.
+> - ✅ What to install (with download links)
+> - ✅ Every command explained (what it does and why)
+> - ✅ Screenshots of what you should see
+> - ✅ Troubleshooting for common beginner mistakes
+> - ✅ Glossary of technical terms
+> 
+> ---
+> 
+> ## 🚀 HAVE CODING EXPERIENCE? → [START-HERE.md](./START-HERE.md)
 > 
 > **Quick Start (3 steps):**
 > ```bash
