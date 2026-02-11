@@ -2,6 +2,10 @@
 
 **Complete Step-by-Step Guide for Beginners**
 
+> [!IMPORTANT]
+> **⚠️ MUST READ FIRST**: You need to clone the `copilot/create-ecommerce-monorepo` branch!
+> The `main` branch only has README. See [CLONE-INSTRUCTIONS.md](./CLONE-INSTRUCTIONS.md).
+
 This guide will walk you through setting up the Nc e-commerce platform on your local machine, from zero to running application in about 15 minutes.
 
 ---
@@ -44,14 +48,16 @@ Open your terminal (Command Prompt on Windows, Terminal on Mac/Linux) and run:
 # Navigate to where you want to store the project
 cd ~/Documents  # or any folder you prefer
 
-# Clone the repository
-git clone https://github.com/abhijeetraiiit/Nc.git
+# Clone the repository (IMPORTANT: Use the PR branch!)
+git clone -b copilot/create-ecommerce-monorepo https://github.com/abhijeetraiiit/Nc.git
 
 # Enter the project folder
 cd Nc
 ```
 
-**What this does:** Downloads all the project files to your computer.
+**What this does:** Downloads all the project files to your computer from the correct branch.
+
+**Why `-b copilot/create-ecommerce-monorepo`?** The full platform is on this branch. The `main` branch only has README.
 
 ---
 

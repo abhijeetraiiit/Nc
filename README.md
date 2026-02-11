@@ -2,6 +2,15 @@
 
 > **Enterprise-grade, India-focused multivendor marketplace built for 2026**
 
+> [!IMPORTANT]
+> **⚠️ Clone the Correct Branch!**
+> 
+> The full platform is on the `copilot/create-ecommerce-monorepo` branch. Clone with:
+> ```bash
+> git clone -b copilot/create-ecommerce-monorepo https://github.com/abhijeetraiiit/Nc.git
+> ```
+> The `main` branch contains only README. See [CLONE-INSTRUCTIONS.md](./CLONE-INSTRUCTIONS.md) for details.
+
 ## ✅ Status: Production Ready
 
 - 🔒 **Security**: 0 vulnerabilities ([verify](#security-status))

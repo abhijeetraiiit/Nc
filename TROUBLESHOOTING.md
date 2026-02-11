@@ -4,6 +4,41 @@ Common issues and their solutions when setting up the Nc e-commerce platform.
 
 ---
 
+## ⚠️ MOST COMMON ISSUE: Wrong Branch
+
+### Error: `npm error Missing script: "dev"`
+
+**Symptoms:**
+- After cloning, `npm install` shows "audited 100 packages" (should be ~1,616)
+- `npm run dev` gives error: "Missing script: 'dev'"  
+- Repository seems to only have README.md and no apps/services/packages folders
+
+**Cause:** You cloned the `main` branch, which only contains README.
+
+**Solution:**
+```bash
+# Check which branch you're on
+git branch
+# If it shows "* main", you're on the wrong branch!
+
+# Switch to the correct branch
+git checkout copilot/create-ecommerce-monorepo
+npm install
+npm run dev
+```
+
+**Or clone correctly from the start:**
+```bash
+git clone -b copilot/create-ecommerce-monorepo https://github.com/abhijeetraiiit/Nc.git
+cd Nc
+npm install
+npm run dev
+```
+
+📖 **See [CLONE-INSTRUCTIONS.md](./CLONE-INSTRUCTIONS.md) for complete details.**
+
+---
+
 ## 🚨 Quick Diagnostics
 
 Run this command to check your system:

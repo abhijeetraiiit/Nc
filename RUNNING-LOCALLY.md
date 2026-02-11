@@ -1,5 +1,9 @@
 # 🚀 Running Nc Locally - Quick Guide
 
+> [!WARNING]
+> **Important**: Clone the `copilot/create-ecommerce-monorepo` branch, not `main`!
+> See [CLONE-INSTRUCTIONS.md](./CLONE-INSTRUCTIONS.md) for details.
+
 **3 Simple Steps to Get Started**
 
 ---
@@ -7,8 +11,8 @@
 ## Option 1: Quick Start (Recommended)
 
 ```bash
-# 1. Clone the repository
-git clone https://github.com/abhijeetraiiit/Nc.git
+# 1. Clone the repository (CORRECT BRANCH!)
+git clone -b copilot/create-ecommerce-monorepo https://github.com/abhijeetraiiit/Nc.git
 cd Nc
 
 # 2. Install dependencies
