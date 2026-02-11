@@ -24,6 +24,7 @@
   - [Module not found](#13-module-not-found)
   - [TypeScript compilation errors](#14-typescript-compilation-errors)
   - [turbo: command not found](#15-turbo-command-not-found)
+  - [Turbo throws error at line 273](#16-turbo-throws-error-at-line-273)
 
 ---
 
@@ -436,6 +437,58 @@ npm run dev
 # Or bypass checks
 npm run dev:direct
 ```
+
+---
+
+### 16. Turbo throws error at line 273
+
+**Error:**
+```
+C:\Users\...\node_modules\turbo\bin\turbo:273
+  throw e;
+  ^
+```
+
+**What it means:**
+Turbo encountered an error while processing workspaces. Usually happens when a workspace directory doesn't have a valid `package.json` file.
+
+**Why it happens:**
+- A directory in `apps/`, `packages/`, or `services/` doesn't have `package.json`
+- The mobile app is Flutter-based and was missing `package.json`
+- Turbo expects all workspace directories to be valid npm packages
+
+**Quick Fix:**
+This should already be fixed! But if you encounter it:
+
+1. **Check which workspace is missing package.json:**
+```bash
+# List all workspace directories
+ls apps/ packages/ services/
+
+# Check each for package.json
+ls apps/*/package.json
+ls packages/*/package.json
+ls services/*/package.json
+```
+
+2. **If mobile app is missing package.json, it's been added:**
+```bash
+# Should exist now
+cat apps/mobile/package.json
+```
+
+3. **Verify Turbo can see all workspaces:**
+```bash
+npx turbo run dev --dry-run
+```
+
+You should see 15 packages in scope including `@nc/mobile`.
+
+**Prevention:**
+Every directory in workspaces must have a `package.json`, even if it's just a placeholder (like for Flutter/React Native apps).
+
+**More Info:**
+See [TURBO-ERROR-FIX.md](./TURBO-ERROR-FIX.md) for complete explanation.
 
 ---
 
