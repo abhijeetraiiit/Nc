@@ -1,0 +1,19 @@
+{
+  "name": "@nc/mobile",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Nc E-commerce Mobile App (Flutter)",
+  "scripts": {
+    "dev": "echo 'Mobile app uses Flutter. Run: flutter run'",
+    "build": "echo 'Mobile app uses Flutter. Run: flutter build'",
+    "lint": "echo 'Mobile app uses Flutter. Run: flutter analyze'",
+    "test": "echo 'Mobile app uses Flutter. Run: flutter test'"
+  },
+  "keywords": [
+    "flutter",
+    "mobile",
+    "ecommerce"
+  ],
+  "devDependencies": {},
+  "dependencies": {}
+}

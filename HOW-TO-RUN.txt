@@ -1,0 +1,99 @@
+╔═══════════════════════════════════════════════════════════════════╗
+║                                                                   ║
+║         🚀 HOW TO RUN THE Nc E-COMMERCE PLATFORM                 ║
+║                                                                   ║
+╚═══════════════════════════════════════════════════════════════════╝
+
+┌───────────────────────────────────────────────────────────────────┐
+│  STEP 1: CLONE THE REPOSITORY (CORRECT BRANCH!)                  │
+└───────────────────────────────────────────────────────────────────┘
+
+  git clone -b copilot/create-ecommerce-monorepo https://github.com/abhijeetraiiit/Nc.git
+  cd Nc
+
+  ⚠️  IMPORTANT: Must use "-b copilot/create-ecommerce-monorepo" flag!
+
+
+┌───────────────────────────────────────────────────────────────────┐
+│  STEP 2: INSTALL DEPENDENCIES                                     │
+└───────────────────────────────────────────────────────────────────┘
+
+  npm install
+
+  This will:
+  ✓ Install ~1,616 packages (takes 1-2 minutes)
+  ✓ Show "0 vulnerabilities" when done
+  ✓ Download all dependencies
+
+
+┌───────────────────────────────────────────────────────────────────┐
+│  STEP 3: START THE PLATFORM                                       │
+└───────────────────────────────────────────────────────────────────┘
+
+  npm run dev
+
+  Wait for:
+  ✓ "Dependencies installed"
+  ✓ "Starting development servers..."
+  ✓ "Running dev in 14 packages"
+
+
+╔═══════════════════════════════════════════════════════════════════╗
+║                   🌐 ACCESS YOUR APPLICATIONS                     ║
+╚═══════════════════════════════════════════════════════════════════╝
+
+  Once running, open these URLs in your browser:
+
+  📱 Web App (Customer Store)
+     → http://localhost:3000
+
+  👔 Vendor Dashboard
+     → http://localhost:3001
+
+  🔧 Admin Panel
+     → http://localhost:3002
+
+  🔌 API Gateway
+     → http://localhost:4000
+
+
+╔═══════════════════════════════════════════════════════════════════╗
+║                        🎉 THAT'S IT!                             ║
+╚═══════════════════════════════════════════════════════════════════╝
+
+  You now have a fully functional e-commerce platform running!
+
+
+┌───────────────────────────────────────────────────────────────────┐
+│  COMMON ISSUES                                                    │
+└───────────────────────────────────────────────────────────────────┘
+
+  ❌ Error: "Missing script: dev"
+     → You're on wrong branch!
+     → Fix: git checkout copilot/create-ecommerce-monorepo
+
+  ❌ Error: "3 vulnerabilities"
+     → You have old code
+     → Fix: git pull origin copilot/create-ecommerce-monorepo
+
+  ❌ Error: "concurrency of 10 but need 15"
+     → Already fixed in latest code
+     → Fix: git pull origin copilot/create-ecommerce-monorepo
+
+
+┌───────────────────────────────────────────────────────────────────┐
+│  NEED MORE HELP?                                                  │
+└───────────────────────────────────────────────────────────────────┘
+
+  📖 Detailed Guide → See START-HERE.md
+  🆘 Troubleshooting → See TROUBLESHOOTING.md
+  🎓 Complete Tutorial → See QUICKSTART.md
+  ☁️  Deploy Online → See ONLINE-DEPLOYMENT.md
+
+
+═══════════════════════════════════════════════════════════════════
+
+  Created by: Nc E-commerce Team
+  Questions? Create an issue on GitHub!
+
+═══════════════════════════════════════════════════════════════════
