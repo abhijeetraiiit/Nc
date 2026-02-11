@@ -2,6 +2,8 @@
 
 Flutter mobile application for iOS and Android.
 
+> **Note:** This is a Flutter app within a Turborepo monorepo. The `package.json` file exists for Turbo compatibility but this app uses Flutter/Dart tooling. Use `flutter` commands instead of `npm` commands for development.
+
 ## Project Structure
 
 ```
