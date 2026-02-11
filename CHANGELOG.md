@@ -12,11 +12,22 @@ All notable changes to the Nc e-commerce platform will be documented in this fil
 - **UPDATED:** NestJS from 10.x to 11.x (latest stable)
 - **UPDATED:** All deprecated packages to supported versions
 
+### 🐛 Bug Fixes
+
+- **FIXED:** Turbo concurrency error (14 persistent tasks but limit was 10)
+  - Added `--concurrency=20` flag to dev scripts
+  - All 14 workspaces now start successfully
+- **FIXED:** Compatibility with Turbo 2.0
+- **FIXED:** Resolved all npm audit warnings
+- **FIXED:** Removed all deprecated package warnings
+
 ### ✨ Added
 
 - **RUNNING-LOCALLY.md** - Quick start guide with 3 setup options
 - Security-patched package versions across all workspaces
 - Turbo 2.0 compatibility (pipeline → tasks)
+- Stream UI for better Turbo output
+- Build artifacts excluded from git (.gitignore updated)
 
 ### 📦 Package Updates
 
@@ -45,12 +56,9 @@ All notable changes to the Nc e-commerce platform will be documented in this fil
 ### 🔧 Configuration
 
 - Updated `turbo.json` to use `tasks` instead of deprecated `pipeline`
-
-### 🐛 Bug Fixes
-
-- Fixed compatibility with Turbo 2.0
-- Resolved all npm audit warnings
-- Removed all deprecated package warnings
+- Added `--concurrency=20` to handle 14 concurrent dev tasks
+- Added `"ui": "stream"` for better console output
+- Updated `.gitignore` to exclude `*.tsbuildinfo` and `next-env.d.ts`
 
 ### 📚 Documentation
 
