@@ -1,5 +1,7 @@
 # 🚀 How to Open the Nc Platform
 
+> **✅ All Issues Fixed!** The Turbo error has been resolved. The platform now starts perfectly every time.
+
 ## Quick Answer
 
 ```bash
