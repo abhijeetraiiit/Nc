@@ -27,7 +27,7 @@ try {
   console.log(`  Admin Panel:      ${GREEN}http://localhost:3002${RESET}`);
   console.log(`  API Gateway:      ${GREEN}http://localhost:4000${RESET}\n`);
   
-  execSync('turbo run dev', { stdio: 'inherit' });
+  execSync('turbo run dev --concurrency=20', { stdio: 'inherit' });
   
 } catch (error) {
   // Error already handled by check-install.js or turbo
