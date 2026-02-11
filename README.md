@@ -3,16 +3,17 @@
 > **Enterprise-grade, India-focused multivendor marketplace built for 2026**
 
 > [!IMPORTANT]
-> ## ⚠️⚠️⚠️ FIRST TIME SETUP? ⚠️⚠️⚠️
+> ## ⚠️⚠️⚠️ GETTING "DATABASE_URL NOT FOUND" ERROR? ⚠️⚠️⚠️
 > 
-> **Run this command BEFORE doing anything else:**
+> **Fix in 10 seconds - Run this command:**
 > 
 > ```bash
 > cp .env.example .env
 > ```
 > 
-> **This fixes the "DATABASE_URL not found" error!**  
-> See [URGENT-READ-FIRST.md](./URGENT-READ-FIRST.md) for details.
+> **Then you can run Prisma migrations!**  
+> 📖 **Complete fix:** [FINAL-FIX-DATABASE-URL.md](./FINAL-FIX-DATABASE-URL.md)  
+> ⏱️ **Time needed:** [TIME-ESTIMATES.md](./TIME-ESTIMATES.md)
 
 ---
 
